@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset = utf-8>
+        <meta name = viewport content = 'width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no'>
+        <title>Pseudo Road</title>
+        <style>
+            @font-face {
+                font-family: font;
+                src: url(src/Dangrek-Regular.ttf)
+            }
+            body {
+                background: #fff;
+                margin: 0;
+                overflow: hidden;
+                font-family: font;
+                user-select: none;
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                touch-action: none;
+            }
+
+            canvas {
+                width: 100%;
+                height: 100%
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id = cvs></canvas>
+        <script src = src/functions.js></script>
+        <script src = src/game.js></script>
+        <script src = src/main.js></script>
+    </body>
+</html>

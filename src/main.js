@@ -12,9 +12,6 @@ function loop() {
     if (dt > 1) dt = 1
     time += dt
 
-    ctx.fillStyle = '#9bf'
-    ctx.fillRect(0, 0, cvs.width, cvs.height)
-
     game.update()
 
     requestAnimationFrame(loop)
@@ -28,6 +25,8 @@ let time = 0
 const cvs = document.getElementById('cvs')
 const ctx = cvs.getContext('2d')
 const game = new Game()
+const mounts = new Image()
+mounts.src = 'src/mountains.png'
 
 onresize = () => resize()
 resize()

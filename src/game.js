@@ -8,7 +8,7 @@ class Game {
             3,3,3,3,3,3,3,3,3,3,3,3,3,1,1,1,1,0,0,0,
         ]
         this.progress = 0
-        this.camX = 0
+        this.camAng = 0
     }
 
     resize() {
@@ -22,17 +22,14 @@ class Game {
         let oldX = 0
         let oldY = 0
         let oldW = 0
-        let oldRoad = 0
-
-        let oft = 0
 
         for (let i = 0; i < this.level.length; i ++) {
-            const diff = (i + Math.floor(this.progress)) % this.level.length
+            const diff = (i + Math.ceil(this.progress)) % this.level.length
             const item = this.level[diff]
 
-            let lerp = i - (this.progress % 1)
-            if (lerp < 0) lerp = 0
-            const pers = 1 / lerp
+            let ler = i - (this.progress % 1)
+            if (ler < 0) ler = 0
+            const pers = 1 / ler
             const width = cvs.width / 2 * pers
 
             const g = Math.sin(diff * 9) * .5
@@ -57,10 +54,12 @@ class Game {
             oldY = y
             oldW = width
 
-            if (!i) oft = item
-            roadX += (item - oft) * 500
+            if (!i) {
+                let last = item
+                if (diff - 1 > 0) last = this.level[diff - 1]
+                this.camAng += (last - item) / 10
+            }
+            roadX += (item + this.camAng) * 500
         }
-
-        // this.camX = this.level[Math.floor(this.progress)] * 500
     }
 }

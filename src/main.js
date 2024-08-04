@@ -7,7 +7,7 @@ function resize() {
 }
 
 function loop() {
-    let dt = (performance.now() - oldPerf) / 16
+    dt = (performance.now() - oldPerf) / 16
     oldPerf = performance.now()
     if (dt > 1) dt = 1
     time += dt

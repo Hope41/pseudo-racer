@@ -17,3 +17,7 @@ function random(min, max) {
 function rgb(r, g, b, a = 1) {
     return 'rgb('+r*255+','+g*255+','+b*255+','+a+')'
 }
+
+function lerp(a, b, x) {
+    return a + x * (b - a)
+}

@@ -7,12 +7,13 @@ class Hero {
         this.x = 0
         this.y = 0
         this.ang = 0
+        this.roll = 0
     }
 
     update() {
-        if (key.up) this.vz += .003 * dt
+        if (key.up) this.vz += .002 * dt
         if (key.down) this.vz -= .001 * dt
-        this.vz *= Math.pow(.98, dt)
+        this.vz *= Math.pow(.99, dt)
         this.z += this.vz
 
         const move = 300

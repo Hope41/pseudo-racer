@@ -1,5 +1,8 @@
 # Pseudo 3D Racer
 
+## 08.08.2024
+![pic](https://github.com/user-attachments/assets/d397de34-ed6c-4d3f-b7ae-2ecf2078cb27)
+
 ## 05.08.2024
 ![pic](https://github.com/user-attachments/assets/5104feb5-6449-42ae-8852-493a72a2a4c6)
 
